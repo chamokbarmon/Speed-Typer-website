@@ -1,1 +1,47 @@
-hlw
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+     <div class="container">
+        <div class="col bg-primary text-center text-white p-3">
+           1. Local Storage Vs. Session Storage?
+           <br><br>
+          Ans : Session Storage: The sessionStorage object stores data only for a session. It means that the data stored in the sessionStorage will be deleted when the browser is closed.
+
+           Local Storage: Unlike sessionStorage localStorage continues to store data after the browser is closed. It means that data stored in localStorage does not expire.
+        </div>
+        <br><br>
+        <div class="col bg-black text-center text-white p-3">
+           2. Global Scope Vs. Block Scope? 
+           <br><br>
+            Scope: Visibility or Accessibility of a variable.
+            
+            Global Scope: If a variable is declared outside all functions or curly braces ({}), it is said to be defined in the global scope. Once you’ve declared a global variable, you can use that variable anywhere in your code, even in functions.
+            
+            Block Scope: When you declare a variable with const or let within a curly brace ({}), you can access this variable only within that curly brace.
+        </div>
+        <br><br>
+        <div class="col bg-success text-center text-white p-3">
+           3. What is Event Loop?
+           <br><br>
+            Event Loop: It's a fundamental piece of the JavaScript engine that always monitor call stack, task queue and microtask queue. If the call stack is empty it puts callback function in call stact from task queues.
+        </div>
+        <br><br>
+        <div class="col bg-danger text-center text-white  p-3">
+           4.When do we get undefined in JavaScript?
+            <br><br>
+            1. When value is not defined.
+            2. When a function does not return anything it return undefined.
+            3. When you try to access a property of an object that does not exist.
+         
+        </div>
+       
+     </div> 
+</body>
+</html>
