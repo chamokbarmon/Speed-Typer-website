@@ -180,6 +180,15 @@ button {
   position: fixed;
   top: 0;
 }
+.btn{
+  height: 50px;
+  width: 150px;
+  border:2px solid black;
+  background-color: #bb0b0b;
+  color: white;
+  text-align: center;
+  margin-left: 50px;
+}
 
 @media only screen and (max-width: 700px) {
   .box-container {
