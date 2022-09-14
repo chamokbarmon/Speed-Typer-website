@@ -6,10 +6,10 @@ const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
 // variables
-let userText = "";
+let userText = '';
 let errorCount = 0;
 let startTime;
-let questionText = "";
+let questionText = '';
 
 // Load and display question
 fetch("./texts.json")
@@ -70,11 +70,11 @@ const gameOver = () => {
   const timeTaken = (finishTime - startTime) / 1000;
 
   // show result modal
-  resultModal.innerHTML = "";
+  resultModal.innerHTML = '';
   resultModal.classList.remove("hidden");
   modalBackground.classList.remove("hidden");
   // clear user text
-  display.innerHTML = "";
+  display.innerHTML = '';
   // make it inactive
   display.classList.add("inactive");
   // show result
@@ -90,7 +90,7 @@ const gameOver = () => {
   // restart everything
   startTime = null;
   errorCount = 0;
-  userText = "";
+  userText = '';
   display.classList.add("inactive");
 };
 
@@ -104,17 +104,17 @@ const start = () => {
   if (startTime) return;
 
   let count = 3;
-  countdownOverlay.style.display = "flex";
+  countdownOverlay.style.display = 'flex';
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
-    if (count == 0) {
+    if (count === 0) {
       // -------------- START TYPING -----------------
-      document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "none";
-      display.classList.remove("inactive");
+      document.addEventListener('keydown', typeController);
+      countdownOverlay.style.display = 'none';
+      display.classList.remove('inactive');
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
@@ -124,7 +124,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start);
+startBtn.addEventListener('click', start);
 
 // If history exists, show it
 displayHistory();
@@ -132,7 +132,7 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpent =  Math.floor(currentTime - startTime) / 1000;
 
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
